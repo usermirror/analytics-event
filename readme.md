@@ -38,10 +38,10 @@ yarn add analytics-event
 #### Examples
 
 ```javascript
-import Event from 'analytics-event'
+import AEvent from 'analytics-event'
 
-// generate event from options 
-Event({
+// Generate event from options 
+AEvent({
   name: 'User Signed Up',
   properties: {
     referral_type: 'friend'
@@ -49,7 +49,7 @@ Event({
 })
 
 // Use your favorite analytics library to send events
-analytics.track(Event({
+analytics.track(AEvent({
   name: 'User Signed Up',
   properties: {
     referral_type: 'friend'
@@ -76,15 +76,16 @@ Event({
 #### Formatting an event
 
 ```javascript
-import Event from 'analytics-event'
+import AEvent from 'analytics-event'
+
 // You can also just import the format function with:
 // import { format, loadFormat } from 'analytics-event'
 import internalDataFormat from './internal-data-format'
 
-loadFormat('internal-data', internalDataFormat)
+Event.loadFormat('internal-data', internalDataFormat)
 
 function receiveIncomingEvents(batch) {
-  return batch.map(msg => Event.format(msg, {
+  return batch.map(msg => AEvent.format(msg, {
     preset: 'internal-data'
   }))
 }
