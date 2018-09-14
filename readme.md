@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.npmjs.com/package/analytics-event"><img src="./docs/images/banner.png?cache=1" alt="analyticsEvent" /></a>
+  <a href="https://www.npmjs.com/package/analytics-event"><img src="./docs/images/banner.png?cache=2" alt="analyticsEvent" /></a>
 </p>
 
 <p align="center">
@@ -10,10 +10,10 @@
 
 <p align="center">
   <a href="https://unpkg.com/analytics-event/dist/analytics-event.min.js">
-    <img src="https://img.badgesize.io/https://unpkg.com/analytics-event/dist/analytics-event.min.js?compression=gzip&amp;label=analytics--id&cache=2">
+    <img src="https://img.badgesize.io/https://unpkg.com/analytics-event/dist/analytics-event.min.js?compression=gzip&amp;label=analytics--id&cache=3">
   </a>
   <a href="https://www.npmjs.com/package/analytics-event">
-    <img src="https://img.shields.io/npm/v/analytics-event.svg?maxAge=3600&label=analytics-event&colorB=007ec6">
+    <img src="https://img.shields.io/npm/v/analytics-event.svg?maxAge=3600&label=analytics-event&colorB=007ec6&cache=3">
   </a>
 </p>
 <br/>
@@ -62,10 +62,10 @@ analytics.track(AEvent({
 #### Generating an event
 
 ```javascript
-import Event from 'analytics-event'
+import AEvent from 'analytics-event'
 
-// Generate an event that matches https://schema.org/AnalyticsEvent
-Event({
+// Generate an event that follows https://schema.org/AnalyticsEvent
+AEvent({
   name: 'User Signed Up',
   properties: {
     referral_type: 'friend'
@@ -82,7 +82,7 @@ import AEvent from 'analytics-event'
 // import { format, loadFormat } from 'analytics-event'
 import internalDataFormat from './internal-data-format'
 
-Event.loadFormat('internal-data', internalDataFormat)
+AEvent.loadFormat('internal-data', internalDataFormat)
 
 function receiveIncomingEvents(batch) {
   return batch.map(msg => AEvent.format(msg, {
