@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://unpkg.com/analytics-event/dist/analytics-event.min.js">
-    <img src="https://img.badgesize.io/https://unpkg.com/analytics-event/dist/analytics-event.min.js?compression=gzip&amp;label=analytics--id&cache=3">
+    <img src="https://img.badgesize.io/https://unpkg.com/analytics-event/dist/analytics-event.min.js?compression=gzip&amp;label=analytics--event&cache=3">
   </a>
   <a href="https://www.npmjs.com/package/analytics-event">
     <img src="https://img.shields.io/npm/v/analytics-event.svg?maxAge=3600&label=analytics-event&colorB=007ec6&cache=3">
