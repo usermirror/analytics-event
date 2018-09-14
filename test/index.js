@@ -12,3 +12,16 @@ test(t => {
 test(t => {
   t.is(Event({ event: 'test' }).name, 'test')
 })
+
+test(t => {
+  const Event2 = Event.withOptions({
+    'getters.name': () => 'test2'
+  })
+
+  t.is(
+    Event2({
+      event: 'test'
+    }).name,
+    'test2'
+  )
+})
