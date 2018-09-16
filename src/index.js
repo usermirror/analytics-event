@@ -7,6 +7,9 @@ function analyticsEvent(input = {}, options = {}) {
   //  - provide option to validate final event payload
   //  - temporarily store input to save for retries
   //  - provide handler to trigger alert on invalid event
+  const namespaceId = getters.namespaceId(input, options)
+  const messageId = getters.messageId(input, options)
+  const timestamp = getters.timestamp(input, options)
   const eventName = getters.name(input, options)
   const eventProps = getters.properties(input, options)
 
@@ -18,6 +21,22 @@ function analyticsEvent(input = {}, options = {}) {
 
   if (eventProps) {
     newEvent.properties = eventProps
+  }
+
+  if (timestamp) {
+    newEvent.timestamp = timestamp
+  }
+
+  if (namespaceId) {
+    newEvent.namespaceId = namespaceId
+  }
+
+  if (messageId) {
+    newEvent.messageId = messageId
+  }
+
+  if (options.format) {
+    return format(newEvent, options)
   }
 
   return newEvent
