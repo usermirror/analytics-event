@@ -19,6 +19,7 @@
     "major": "npm run pt && npm version major && npm run p",
     "pt": "npm run build:production && npm test",
     "t": "npm run build && npm test",
+    "prepare": "npm run pt",
     "p": "npm publish"
   },
   "repository": {
@@ -53,6 +54,6 @@
     "rollup-plugin-uglify": "^4.0.0"
   },
   "dependencies": {
-    "analytics-id": "^1.0.2"
+    "analytics-id": "^1.0.3"
   }
 }

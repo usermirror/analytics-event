@@ -25,3 +25,7 @@ test(t => {
     'test2'
   )
 })
+
+test(t => {
+  t.not(Event().messageId, 'null')
+})
