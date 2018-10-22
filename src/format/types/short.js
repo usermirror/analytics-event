@@ -21,5 +21,9 @@ module.exports = function formatShort(event) {
     newEvent.props = event.properties
   }
 
+  if (event.context) {
+    newEvent.ctx = event.context
+  }
+
   return newEvent
 }

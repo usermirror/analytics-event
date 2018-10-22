@@ -12,6 +12,7 @@ function analyticsEvent(input = {}, options = {}) {
   const timestamp = getters.timestamp(input, options)
   const eventName = getters.name(input, options)
   const eventProps = getters.properties(input, options)
+  const eventContext = getters.context(input, options)
 
   const newEvent = {}
 
@@ -21,6 +22,10 @@ function analyticsEvent(input = {}, options = {}) {
 
   if (eventProps) {
     newEvent.properties = eventProps
+  }
+
+  if (eventContext) {
+    newEvent.context = eventContext
   }
 
   if (timestamp) {
