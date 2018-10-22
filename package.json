@@ -1,6 +1,6 @@
 {
   "name": "analytics-event",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Utility for working with analytics events server-side and in the browser.",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
