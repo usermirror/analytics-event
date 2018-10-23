@@ -1,8 +1,10 @@
+const segment = require('./types/segment')
 const short = require('./types/short')
 const log = require('../utils/log')
 
 const formatByType = {
-  short
+  short,
+  segment
 }
 
 function format(event, options) {
